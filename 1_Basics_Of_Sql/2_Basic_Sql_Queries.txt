@@ -1,0 +1,80 @@
+
+
+1) SELECT : Select query is used to select the columns present in a table.
+
+            Syntax : SELECT column_name FROM table_name
+
+            Here you can select as many as columns u want by just seperating column names with a comma.
+
+            Ex : Select address, district from Address
+
+            You can select all columns in the table by using this '*' symbol.
+
+            Ex : Select * From Address
+
+
+2) ORDER BY : 'ORDER BY' is generally used to sort the data in a column alphabetically or numerically or chronologically
+              based on the data type of column.
+
+              Syntax : Select column_name From table_name ORDER BY column_name
+
+              By default Order By sorts the data in the column in ascending order.
+
+              If you want it in decesnding order then u can use 'Desc' keyword in the end
+
+              Syntax : Select column_name From table_name ORDER BY column_name Desc
+
+                                            (or)
+
+                       Select column_name From table_name ORDER BY column_name Asc (For Ascending Order)
+
+              Suppose u have duplicate entries in a column then u can sort data with multiple columns using ORDER BY
+              Keyword.
+
+              Syntax : Select column_name From table_name ORDER BY coulmn_name_1, column_name_2
+
+              Ex : Select firstname, lastname, email from customer Order By lastname , firstname
+
+              This query first sort the lastname in ascending order and then sort firstname for each unique entries in
+              lastname. 
+
+3) SELECT DISTINCT : Select Distinct Query is used to select distinct elements present in that column only.
+
+                     Syntax : Select Distinct column_name from table_name
+
+                     Ex : Select Distinct last_name from customer
+
+                     This selects the distinct names present in the last_name column.
+
+                     Suppose if u give multiple columns to Select Distinct, then it will give distinct elements of the
+                     combination of columns.
+
+                     Ex : Select Distinct last_name, first_name from customer
+
+4) Limit : Limit command is used to limit the rows in the table. Suppose if you want to display only first 10 rows in 
+           a table then we can use 'Limit' Command.
+
+           Limit Command always present at the end of the query.
+
+           Syntax : Select column_name From table_name Limit number
+
+           Where 'number' is an integer which indicates no of rows we want.
+
+           Ex : Select * From customer Limit 5
+
+5) Count() : Count() is used to count the no of rows present in the output. This function doesn't count the null values
+             present in a row. That means if null values are present in that row then this function doesn't count that 
+             row.
+
+             Syntax : Select Count(*) From Customer.
+
+             Note : Count() takes only one argument.
+
+             We can combine this Count() function with the Distinct Keyword.
+
+             Ex : Select Count(Distinct last_name) From Customer 
+
+             But here we can give argument like this "Distinct last_name, first_name" . Because if u give argument
+             like this then it considers it as two arguments. So this will produce an error if u provide argument like
+             this.
+

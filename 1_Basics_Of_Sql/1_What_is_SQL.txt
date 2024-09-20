@@ -1,0 +1,31 @@
+Before going to learn about SQL, lets see what is a database.
+
+Database : A Database is simply an organized collection of data stored in a computer system.Usually data is stored as 
+           tables in database.
+
+           Each database has a schema which is used to structure the databases.
+
+           To manage these databases we have a software called Database Management System (DBMS). There are so many DBMS
+           in the market such as :
+
+                a) Postgresql
+                b) Mysql
+                c) MariaDB
+                d) MySQL Server etc.
+
+
+SQL : SQL stands for Structured Query Language.This is used to interact with the databases.Interacting simply means 
+      retrieving the data, updating the data, Analyzing the data by using joins , Group By etc.
+
+The reason why we need to learn SQL is :
+
+    1) Data is everywhere.And all these data is stored in databases.So we need to know how to interact with this databases.
+    2) SQL is most important skill if you want to be :
+
+            a) Data Analyst
+            b) Data Scientist
+            c) Business Analyst
+
+
+
+    
