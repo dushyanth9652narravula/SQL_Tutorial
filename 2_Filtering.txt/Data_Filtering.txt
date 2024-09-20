@@ -60,6 +60,28 @@ WHERE Clause : WHERE Clause is used to filter the data.This clause always comes 
 
                                Ex : Select * From customers where customer_id In (123,125,127,135.137)
 
+Pattern Matching : Pattern Matching is simply nothing but whether an name starts with 'A' or ends with 'E' or contain
+                   a particular word etc.
+
+                   To do pattern matching in SQL, we use LIKE Operator.
+
+                   Here we have two wild cards
+
+                   a) Underscore : It represents single charecter only ('_')
+
+                   b) Percentage : It represents one or more charecters ('%')
+
+                   TO do this we have 'Like' keyword in SQL
+
+                   Ex : Now lets find the movie name that has second letter as 'T' and it should be a drama movie
+
+                   Select title,description From film Where description Like '%Drama%' 
+                   AND title Like '_T%'
+
+                   Note : Like is a case sensitive.That means if you want tile start with 'a' and you provided 
+                          'Like 'A%'' then it will give title that start with capital A only.So in order to remove 
+                          case sensitivity we use 'ILIKE' keyword.
+
 
 
 
