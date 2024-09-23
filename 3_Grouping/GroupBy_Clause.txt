@@ -1,0 +1,40 @@
+Before going to learn group By first we need to learn Aggregrate Function.
+
+1) Aggregrate Functions : Aggregate Functions are used to summarize the data . In sql, we mainly use 5 aggregate functions.
+                          Those are :
+
+                          a) SUM(<column_name>) : Finds sum of all elements in that column
+                          b) AVG(<column_name>) : Finds average values of all columns
+                          c) Min(<column_name>) : Finds minimum value in a column
+                          d) Max(<column_name>) : Finds maximum value in a column
+                          e) Count() : Count all non null rows in a table. It doesn't require arguments as input.
+
+                          Ex : Select Sum(amount) As Total_Amount From payments
+
+2) Group BY : Group By clause is used to Group Aggregations By specific columns.
+
+             Syntax : Select Aggregate_Function(<col_name>) From <Table_name> Group By <col_name>
+
+             Ex : Select Sum(amount) From payments Group BY customer_id
+
+             Note : In Group By clause, the columns u want to display must be present in aggregate function or 
+                    in Group By clause.
+
+                    For example, 
+                    Select payment_id, sum(amount) from payment Group By customer_id
+
+                    If you run this query, then u get error such as payment_id should be present atleast in 
+                    aggregate_function or group by clause. But its not present in both. So it will produce an 
+                    error.
+
+                    If you want to Group By multiple columns then we just need mention all the columns next to group by
+                    clause. But First column is unique and the next columns can have duplicate values.
+
+3) Having Clause : 'Having' Clause is used to filter the Groupping by aggregations.
+
+             Syntax : Select <aggregation_type>,column_name From <table_name>
+                      Group By <column_name>
+                      Having condition 
+
+                      Here this condition is based on aggregations.
+                      condition : count(*) > 2 . The conditions are similar to this.
