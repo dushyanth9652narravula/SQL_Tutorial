@@ -1,0 +1,89 @@
+
+
+WHERE Clause : WHERE Clause is used to filter the data.This clause always comes after the 'FROM' Clause.
+
+                  Syntax : Select column_name From table_name WHERE Condition
+
+                  Ex : Select * From payments Where price = 0
+
+                  This gives the all payments with amount = 0
+
+                  Here we have so many comparision operators in SQL for writing the condition.
+
+                  Comparision Operators : 
+
+                        = : Equal to operators
+                        > : Greater than
+                        < : Less than
+                        >=: Greater than or Equal to
+                        <=: Less than or Equal to
+                        !=: Not equal to 
+                        is null : checks whether value is null or Not
+                        is not null : opposite to is null
+
+
+                  Ex : Select * From payments Where price > 10
+
+                  Logical Operators : Logical operators are used to combine two or more conditions. There are two 
+                                      logical operators in sql.
+
+                                      a) AND : Which produces true if both c1 and c2 are true.
+                                      b) OR : It produces true if either c1 or c2 becomes true.
+
+
+                   Ex : Select * From payments where price > 10 AND price < 12
+
+                   BETWEEN Keyword : Between Keyword is used to check in a range (a,b). Here both a and b are included.
+                                     
+                                     Ex : Select * From payment Where amount Between 1.99 AND 6.99 
+
+                                     Here 1.99 and 6.99 are included.
+
+                                     These Between keyword is also used to check condition for dates also.
+
+                                     Ex : Select * From rental Where rental_date Between 'date_1' AND 'date_2'
+
+                                     If date include time zones then these automatically converted into
+
+                                     '2024-09-01 0:00' AND '2024-09-15 0:00'. If you use this then we can get rental_date
+                                     in between 01 and 15 only. But here 15 is not included. So to include 15 date then 
+                                     we manually enter for that date like this '2024-09-15 12:00'
+
+                                     Ex : Select * From rental where rental_date Between '2024-09-01' AND '2024-09-15 12:00'
+
+                                     Here Between keyword only takes date in the format of 'yyyy-mm-dd' format.
+
+                  
+                  In Keyword : In keyword is used to filter the data by using a list of elements. Here we check 
+                               elements are present in list . That means if you have multiple 'OR' conditions 
+                               in where clause, we can use 'In' keywors instead of multiple 'Or' conditions
+
+                               Ex : Select * From customers where customer_id In (123,125,127,135.137)
+
+Pattern Matching : Pattern Matching is simply nothing but whether an name starts with 'A' or ends with 'E' or contain
+                   a particular word etc.
+
+                   To do pattern matching in SQL, we use LIKE Operator.
+
+                   Here we have two wild cards
+
+                   a) Underscore : It represents single charecter only ('_')
+
+                   b) Percentage : It represents one or more charecters ('%')
+
+                   TO do this we have 'Like' keyword in SQL
+
+                   Ex : Now lets find the movie name that has second letter as 'T' and it should be a drama movie
+
+                   Select title,description From film Where description Like '%Drama%' 
+                   AND title Like '_T%'
+
+                   Note : Like is a case sensitive.That means if you want tile start with 'a' and you provided 
+                          'Like 'A%'' then it will give title that start with capital A only.So in order to remove 
+                          case sensitivity we use 'ILIKE' keyword.
+
+
+
+
+
+                  

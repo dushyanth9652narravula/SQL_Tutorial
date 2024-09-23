@@ -1,0 +1,23 @@
+1) Comments in Sql : We can write comments in SQL by using these syntax
+
+                    a) Single line Comments : We can write single line comments in SQL like this 
+                     
+                     Syntax : --<comment you want to write>
+
+                     Ex : --Filtering out customer_id and customer name
+
+                     b) Multi Line Comments : We can write multi line comments by using /* */
+
+                     Syntax : /*  Comment_1
+                                  Comment_2
+                                  Comment_3
+                                              */
+                     Ex : /* Filter customer_id and customer_name from customers table_name
+                             Now Find how many customer's start with Adam.   */
+
+2) Aliases : Aliases is simply as assign alternate name for particular column or database tempproryly not permanently.
+             I mean we won't change name of the column in the database. We just convert the names into descriptive manner
+             using aliases.
+
+             Syntax : Select Count(*) As First_name_as_Adam from customer 
+                      Where first_name = 'Adam'
